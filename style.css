@@ -1,0 +1,98 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(58, 48, 58);
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+main {
+    align-self: center;
+    justify-self: center;
+}
+
+canvas {
+  display: block;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+/*ref du bouton : https://uiverse.io/cssbuttons-io/fat-tiger-100*/
+.bouton-perso {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: center;
+  align-self: center;
+  width:350px;
+  height:120px;
+  
+appearance: button;
+ background-color: #765b76;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ box-sizing: border-box;
+ color: #FFFFFF;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 28px;
+ font-weight: 700;
+ letter-spacing: .9px;
+ line-height: 20px;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 13px 19px;
+ text-align: center;
+ /* text-transform: uppercase; */
+ touch-action: manipulation;
+ transform: translateZ(0);
+ transition: filter .2s;
+ user-select: none;
+ -webkit-user-select: none;
+ vertical-align: middle;
+ white-space: nowrap;
+}
+
+
+.bouton-perso:after {
+ background-clip: padding-box;
+ background-color: #6b3b7d;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ bottom: -4px;
+ content: "";
+ left: 0;
+ position: absolute;
+ right: 0;
+ top: 0;
+ z-index: -1;
+}
+
+.bouton-perso:main, .bouton-perso:focus {
+ user-select: auto;
+}
+
+.bouton-perso:hover:not(:disabled) {
+ filter: brightness(1.1);
+}
+
+.bouton-perso:disabled {
+ cursor: auto;
+}
+
+.bouton-perso:active:after {
+ border-width: 0 0 0px;
+}
+
+.bouton-perso:active {
+ padding-bottom: 10px;
+}
